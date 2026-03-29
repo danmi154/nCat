@@ -1,0 +1,17 @@
+name = "nCat"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["InfCat"]
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.28.0"
+
+[[lean_lib]]
+name = "InfCat"
