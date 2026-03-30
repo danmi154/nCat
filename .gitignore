@@ -1,0 +1,27 @@
+# Lean / Lake
+/.lake/
+/build/
+
+# Loopy (autoprover)
+.loopy/
+loopy.toml
+
+# Claude Code
+.claude/
+
+# Editor
+*.olean
+*.ilean
+*.trace
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Audit reports (generated, not source)
+AUDIT_REPORT.md

@@ -116,6 +116,9 @@ lemma isWeakHomotopyEquiv_of_iso {X Y : SSet.{u}} (e : X ≅ Y) :
 /-- Weak homotopy equivalences satisfy 2-out-of-3. -/
 lemma IsWeakHomotopyEquiv.comp {X Y Z : SSet.{u}} {f : X ⟶ Y} {g : Y ⟶ Z}
     (hf : IsWeakHomotopyEquiv f) (hg : IsWeakHomotopyEquiv g) :
-    IsWeakHomotopyEquiv (f ≫ g) := sorry
+    IsWeakHomotopyEquiv (f ≫ g) := by
+  intro K _
+  simpa [MonoidalClosed.pre_map, π₀Map_comp] using
+    Function.Bijective.comp (hf K) (hg K)
 
 end SSet
